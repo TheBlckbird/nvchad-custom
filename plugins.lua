@@ -42,6 +42,11 @@ local plugins = {
     "nvim-tree/nvim-tree.lua",
     opts = overrides.nvimtree,
   },
+
+  {
+    "vim-php/vim-php-refactoring",
+    ft = { "php" },
+  },
 }
 
 return plugins
