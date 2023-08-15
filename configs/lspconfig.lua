@@ -10,7 +10,7 @@ lspconfig.intelephense.setup {
   root_dir = lspconfig.util.root_pattern "composer.json",
 }
 
-local servers = { "html", "cssls", "svelte" }
+local servers = { "html", "cssls", "svelte", "emmet_ls" }
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {

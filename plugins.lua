@@ -11,7 +11,7 @@ local plugins = {
     dependencies = {
       "jose-elias-alvarez/null-ls.nvim",
       config = function()
-        require "custom.configs.null-ls"
+        require "custom.configs.plugins.null-ls"
       end,
     },
     config = function(_)
@@ -28,6 +28,7 @@ local plugins = {
         "svelte-language-server",
         "css-lsp",
         "html-lsp",
+        "emmet-ls",
       },
     },
   },
@@ -55,6 +56,17 @@ local plugins = {
 
   {
     dir = "~/Desktop/side-projects/bible-votd",
+  },
+
+  {
+    "stevearc/oil.nvim",
+    config = function(_)
+      require "custom.configs.plugins.oil"
+    end,
+    opts = {},
+    -- Optional dependencies
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    lazy = false,
   },
 }
 
