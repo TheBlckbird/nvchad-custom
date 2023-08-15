@@ -47,6 +47,11 @@ local plugins = {
     "vim-php/vim-php-refactoring",
     ft = { "php" },
   },
+
+  {
+    "andweeb/presence.nvim",
+    event = "VeryLazy",
+  },
 }
 
 return plugins
