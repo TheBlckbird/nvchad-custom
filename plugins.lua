@@ -68,6 +68,11 @@ local plugins = {
     dependencies = { "nvim-tree/nvim-web-devicons" },
     lazy = false,
   },
+
+  {
+    "christoomey/vim-tmux-navigator",
+    lazy = false,
+  },
 }
 
 return plugins
