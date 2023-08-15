@@ -29,6 +29,8 @@ local plugins = {
         "css-lsp",
         "html-lsp",
         "emmet-ls",
+        "typescript-language-server",
+        "tailwindcss-language-server",
       },
     },
   },
