@@ -52,6 +52,10 @@ local plugins = {
     "andweeb/presence.nvim",
     event = "VeryLazy",
   },
+
+  {
+    dir = "~/Desktop/side-projects/bible-votd",
+  },
 }
 
 return plugins
