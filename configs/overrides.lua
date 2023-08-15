@@ -13,6 +13,7 @@ M.nvimtree = {
       },
     },
   },
+  filters = { custom = { "^.git$" } },
 }
 
 return M
