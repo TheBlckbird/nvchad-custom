@@ -28,7 +28,7 @@ local plugins = {
         "svelte-language-server",
         "css-lsp",
         "html-lsp",
-        "emmet-ls",
+        "emmet-language-server",
         "typescript-language-server",
         "tailwindcss-language-server",
       },
