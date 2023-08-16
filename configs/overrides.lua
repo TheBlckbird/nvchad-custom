@@ -16,4 +16,13 @@ M.nvimtree = {
   filters = { custom = { "^.git$" } },
 }
 
+M.colorizer = {
+  filetypes = { "*", svelte = { tailwind = true } },
+  user_default_options = {
+    tailwind = true,
+    css = true,
+  },
+  buftypes = {},
+}
+
 return M
