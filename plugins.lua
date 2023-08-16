@@ -47,6 +47,11 @@ local plugins = {
   },
 
   {
+    "NvChad/nvim-colorizer.lua",
+    opts = overrides.colorizer,
+  },
+
+  {
     "vim-php/vim-php-refactoring",
     ft = { "php" },
   },
@@ -105,12 +110,9 @@ local plugins = {
 
   {
     "rcarriga/nvim-notify",
+    event = "VeryLazy",
     config = function()
-      local notify = require "notify"
-      -- this for transparency
-      notify.setup { background_colour = "#000000" }
-      -- this overwrites the vim notify function
-      vim.notify = notify.notify
+      vim.notify = require "notify"
     end,
   },
 }
