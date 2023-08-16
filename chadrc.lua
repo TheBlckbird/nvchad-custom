@@ -63,7 +63,17 @@ M.ui = {
 
         vim.cmd "function! TbSwitchTheme(a,b,c,d) \n lua SwitchTheme() \n endfunction"
 
-        return "%@TbSwitchTheme@%#TbLineSwitchThemeBtn#" .. " Next Theme: " .. get_next_theme() .. " " .. "%X"
+        ------CloseAllBufsBtn------
+        vim.cmd "function! TbCloseAllBufs(a,b,c,d) \n lua require('nvchad.tabufline').closeAllBufs() \n endfunction"
+        local CloseAllBufsBtn = "%@TbCloseAllBufs@%#TbLineCloseAllBufsBtn#" .. " 󰅖 " .. "%X"
+        ---------------------------
+
+        return "%@TbSwitchTheme@%#TbLineSwitchThemeBtn#"
+          .. " Next Theme: "
+          .. get_next_theme()
+          .. " "
+          .. "%X"
+          .. CloseAllBufsBtn
       end)()
     end,
   },
