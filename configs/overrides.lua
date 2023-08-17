@@ -14,6 +14,10 @@ M.nvimtree = {
     },
   },
   filters = { custom = { "^.git$" } },
+
+  view = {
+    width = 40,
+  },
 }
 
 M.colorizer = {
