@@ -25,4 +25,11 @@ M.colorizer = {
   buftypes = {},
 }
 
+local cmp = require "cmp"
+
+M.cmp = {
+  completion = { completeopt = "noselect" },
+  preselect = cmp.PreselectMode.None,
+}
+
 return M

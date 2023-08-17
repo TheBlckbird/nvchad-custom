@@ -115,6 +115,24 @@ local plugins = {
       vim.notify = require "notify"
     end,
   },
+
+  {
+    "max397574/colortils.nvim",
+    cmd = "Colortils",
+    config = function()
+      require("colortils").setup()
+    end,
+  },
+
+  {
+    "leafOfTree/vim-svelte-plugin",
+    ft = { "svelte" },
+  },
+
+  {
+    "hrsh7th/nvim-cmp",
+    opts = overrides.cmp,
+  },
 }
 
 return plugins
