@@ -133,6 +133,19 @@ local plugins = {
     "hrsh7th/nvim-cmp",
     opts = overrides.cmp,
   },
+
+  {
+    "nvim-pack/nvim-spectre",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    cmd = { "Spectre" },
+    keys = {
+      "<leader>S",
+      "<leader>sw",
+      "<leader>sp",
+    },
+  },
 }
 
 return plugins
