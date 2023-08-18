@@ -9,6 +9,7 @@ local sources = {
   },
   formatting.stylua,
   formatting.pint,
+  -- formatting.blade_formatter,
 
   lint.phpstan,
   lint.shellcheck,

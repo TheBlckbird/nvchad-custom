@@ -23,3 +23,8 @@ vim.keymap.set("v", "<leader>sw", '<esc><cmd>lua require("spectre").open_visual(
 vim.keymap.set("n", "<leader>sp", '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>', {
   desc = "Search on current file",
 })
+
+-- vim.api.nvim_command "augroup BladeFileTypeRelated"
+-- vim.api.nvim_command "autocmd!"
+-- vim.api.nvim_command "autocmd BufNewFile,BufRead *.blade.php set ft=blade"
+-- vim.api.nvim_command "augroup END"

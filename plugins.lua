@@ -22,17 +22,7 @@ local plugins = {
 
   {
     "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = {
-        "intelephense",
-        "svelte-language-server",
-        "css-lsp",
-        "html-lsp",
-        "emmet-language-server",
-        "typescript-language-server",
-        "tailwindcss-language-server",
-      },
-    },
+    opts = require "custom.configs.plugins.mason",
   },
 
   {
@@ -144,6 +134,31 @@ local plugins = {
       "<leader>S",
       "<leader>sw",
       "<leader>sp",
+    },
+  },
+
+  {
+    "windwp/nvim-ts-autotag",
+    config = function(_)
+      require("nvim-ts-autotag").setup()
+    end,
+    ft = {
+      "astro",
+      "glimmer",
+      "handlebars",
+      "html",
+      "javascript",
+      "javascriptreact",
+      "jsx",
+      "svelte",
+      "typescript",
+      "typescriptreact",
+      "tsx",
+      "vue",
+      "markdown",
+      "php",
+      "rescript",
+      "xml",
     },
   },
 }
