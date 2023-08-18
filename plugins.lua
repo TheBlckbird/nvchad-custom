@@ -1,166 +1,37 @@
-local overrides = require "custom.configs.overrides"
+return {
+  require "custom.plugins.copilot",
 
-local plugins = {
-  {
-    "github/copilot.vim",
-    event = "BufEnter",
-  },
+  require "custom.plugins.lspconfig",
 
-  {
-    "neovim/nvim-lspconfig",
-    dependencies = {
-      "jose-elias-alvarez/null-ls.nvim",
-      config = function()
-        require "custom.configs.plugins.null-ls"
-      end,
-    },
-    config = function(_)
-      require "plugins.configs.lspconfig"
-      require "custom.configs.lspconfig"
-    end,
-  },
+  require "custom.plugins.lspconfig",
 
-  {
-    "williamboman/mason.nvim",
-    opts = require "custom.configs.plugins.mason",
-  },
+  require "custom.plugins.todo-comments",
 
-  {
-    "folke/todo-comments.nvim",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    event = "BufEnter",
-  },
+  require "custom.plugins.overrides.nvim-tree",
 
-  {
-    "nvim-tree/nvim-tree.lua",
-    opts = overrides.nvimtree,
-  },
+  require "custom.plugins.overrides.nvim-colorizer",
 
-  {
-    "NvChad/nvim-colorizer.lua",
-    opts = overrides.colorizer,
-  },
+  require "custom.plugins.php-refactoring",
 
-  {
-    "vim-php/vim-php-refactoring",
-    ft = { "php" },
-  },
+  require "custom.plugins.discord-presence",
 
-  {
-    "andweeb/presence.nvim",
-    event = "VeryLazy",
-  },
+  require "custom.plugins.bible-votd",
 
-  {
-    dir = "~/Desktop/side-projects/bible-votd",
-  },
+  require "custom.plugins.oil",
 
-  {
-    "stevearc/oil.nvim",
-    config = function(_)
-      require "custom.configs.plugins.oil"
-    end,
-    opts = {},
-    -- Optional dependencies
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-    lazy = false,
-  },
+  require "custom.plugins.vim-tmux-navigator",
 
-  {
-    "christoomey/vim-tmux-navigator",
-    lazy = false,
-  },
+  require "custom.plugins.laravel",
 
-  {
-    "adalessa/laravel.nvim",
-    dependencies = {
-      "nvim-telescope/telescope.nvim",
-      "tpope/vim-dotenv",
-      "MunifTanjim/nui.nvim",
-    },
-    cmd = { "Sail", "Artisan", "Composer", "Npm", "Yarn", "Laravel" },
-    keys = {
-      { "<leader>la", ":Laravel artisan<cr>" },
-      { "<leader>lr", ":Laravel routes<cr>" },
-      {
-        "<leader>lt",
-        function()
-          require("laravel.tinker").send_to_tinker()
-        end,
-        mode = "v",
-        desc = "Laravel Application Routes",
-      },
-    },
-    event = { "VeryLazy" },
-    config = function()
-      require("laravel").setup()
-      require("telescope").load_extension "laravel"
-    end,
-  },
+  require "custom.plugins.nvim-notify",
 
-  {
-    "rcarriga/nvim-notify",
-    event = "VeryLazy",
-    config = function()
-      vim.notify = require "notify"
-    end,
-  },
+  require "custom.plugins.colortils",
 
-  {
-    "max397574/colortils.nvim",
-    cmd = "Colortils",
-    config = function()
-      require("colortils").setup()
-    end,
-  },
+  require "custom.plugins.svelte",
 
-  {
-    "leafOfTree/vim-svelte-plugin",
-    ft = { "svelte" },
-  },
+  require "custom.plugins.overrides.nvim-cmp",
 
-  {
-    "hrsh7th/nvim-cmp",
-    opts = overrides.cmp,
-  },
+  require "custom.plugins.spectre",
 
-  {
-    "nvim-pack/nvim-spectre",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-    },
-    cmd = { "Spectre" },
-    keys = {
-      "<leader>S",
-      "<leader>sw",
-      "<leader>sp",
-    },
-  },
-
-  {
-    "windwp/nvim-ts-autotag",
-    config = function(_)
-      require("nvim-ts-autotag").setup()
-    end,
-    ft = {
-      "astro",
-      "glimmer",
-      "handlebars",
-      "html",
-      "javascript",
-      "javascriptreact",
-      "jsx",
-      "svelte",
-      "typescript",
-      "typescriptreact",
-      "tsx",
-      "vue",
-      "markdown",
-      "php",
-      "rescript",
-      "xml",
-    },
-  },
+  require "custom.plugins.nvim-ts-autotag",
 }
-
-return plugins
