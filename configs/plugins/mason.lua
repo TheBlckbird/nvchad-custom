@@ -7,6 +7,7 @@ local mason = {
     "emmet-language-server",
     "typescript-language-server",
     "tailwindcss-language-server",
+    "solargraph",
   },
 }
 

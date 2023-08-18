@@ -9,8 +9,10 @@ local sources = {
   },
   formatting.stylua,
   formatting.pint,
+  formatting.rubocop,
   -- formatting.blade_formatter,
 
+  lint.rubocop,
   lint.phpstan,
   lint.shellcheck,
 }
