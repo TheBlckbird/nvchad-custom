@@ -1,6 +1,6 @@
 return {
   "max397574/colortils.nvim",
-  cmd = "colortils",
+  cmd = "Colortils",
   config = function()
     require("colortils").setup()
   end,
