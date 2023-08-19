@@ -7,6 +7,8 @@ M.general = {
     ["<C-j>"] = { "<cmd> TmuxNavigateDown<CR>", "window down" },
     ["<C-k>"] = { "<cmd> TmuxNavigateUp<CR>", "window up" },
     ["<leader>cs"] = { "A;<ESC>", "Insert Semicolon" },
+    ["m"] = { "o<ESC>" },
+    ["z"] = { "<C-r>" },
   },
 }
 
