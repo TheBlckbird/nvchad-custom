@@ -1,3 +1,3 @@
 return {
-  dir = "~/Desktop/side-projects/bible-votd",
+  dir = "~/Desktop/projects/bible-votd",
 }
