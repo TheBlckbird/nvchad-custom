@@ -13,6 +13,7 @@ return {
   require "custom.plugins.svelte",
   require "custom.plugins.spectre",
   require "custom.plugins.nvim-ts-autotag",
+  require "custom.plugins.markdown",
 
   require "custom.plugins.overrides.nvim-tree",
   require "custom.plugins.overrides.nvim-cmp",
