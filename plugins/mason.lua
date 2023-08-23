@@ -11,6 +11,8 @@ return {
       "typescript-language-server",
       "tailwindcss-language-server",
       "solargraph",
+      "pyright",
+      "vue-language-server",
     },
   },
 }
