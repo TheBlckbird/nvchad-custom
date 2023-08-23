@@ -13,7 +13,8 @@ local servers = {
   "intelephense",
   "solargraph",
   "pyright",
-  "vue-language-server",
+  "vuels",
+  "java_language_server",
 }
 
 for _, lsp in ipairs(servers) do

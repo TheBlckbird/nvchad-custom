@@ -13,6 +13,7 @@ return {
       "solargraph",
       "pyright",
       "vue-language-server",
+      "java-language-server",
     },
   },
 }
