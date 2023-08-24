@@ -4,8 +4,8 @@ local M = {}
 -- local highlights = require "custom.highlights"
 
 M.ui = {
-  theme = "gruvbox",
-  theme_toggle = { "gruvbox", "gruvbox" },
+  theme = "catppuccin",
+  theme_toggle = { "catppuccin", "everforest_light" },
 
   statusline = {
     theme = "vscode_colored",
