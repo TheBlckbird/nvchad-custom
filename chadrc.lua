@@ -1,17 +1,19 @@
 ---@type ChadrcConfig
 local M = {}
 
-local highlights = require "custom.highlights"
+-- local highlights = require "custom.highlights"
 
 M.ui = {
   theme = "gruvbox",
-  theme_toggle = { "gruvbox", "github_light" },
+  theme_toggle = { "gruvbox", "gruvbox" },
 
   statusline = {
     theme = "vscode_colored",
   },
 
-  hl_override = highlights.override,
+  hl_override = {
+    Comment = { italic = true },
+  },
 }
 
 M.plugins = "custom.plugins"
