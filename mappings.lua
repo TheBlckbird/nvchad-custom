@@ -2,9 +2,8 @@ local M = {}
 
 M.general = {
   n = {
-    ["<leader>cs"] = { "A;<ESC>", "Insert Semicolon" },
+    ["cs"] = { "A;<ESC>", "Add a Semicolon at the end of the line" },
     ["m"] = { "o<ESC>" },
-    ["z"] = { "<C-r>" },
   },
 }
 
@@ -16,14 +15,6 @@ M.tmux_navigation = {
     ["<C-l>"] = { "<cmd> TmuxNavigateRight<CR>", "window right" },
     ["<C-j>"] = { "<cmd> TmuxNavigateDown<CR>", "window down" },
     ["<C-k>"] = { "<cmd> TmuxNavigateUp<CR>", "window up" },
-  },
-}
-
-M.venn = {
-  plugin = true,
-
-  n = {
-    ["ä"] = { "<cmd> VBox<CR>" },
   },
 }
 
