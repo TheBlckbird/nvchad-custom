@@ -13,16 +13,6 @@ M.ui = {
 
   hl_override = highlights.overrides,
 
-  -- hl_override = {
-  --   Comment = {
-  --     italic = true,
-  --   },
-  --   NvDashAscii = {
-  --     bg = "NONE",
-  --     fg = "baby_pink",
-  --   },
-  -- },
-
   -- nvdash (dashboard)
   nvdash = {
     load_on_startup = true,

@@ -9,7 +9,8 @@ local sources = {
   },
   formatting.stylua,
   formatting.pint,
-  formatting.rubocop,
+  formatting.rustfmt,
+  -- formatting.rubocop,
   -- formatting.blade_formatter,
 
   lint.rubocop,

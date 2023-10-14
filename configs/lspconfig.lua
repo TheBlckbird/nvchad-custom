@@ -2,6 +2,7 @@ local on_attach = require("plugins.configs.lspconfig").on_attach
 local capabilities = require("plugins.configs.lspconfig").capabilities
 
 local lspconfig = require "lspconfig"
+local util = require "lspconfig/util"
 
 local servers = {
   "html",
@@ -15,6 +16,7 @@ local servers = {
   "pyright",
   "vuels",
   "java_language_server",
+  "pest_ls",
 }
 
 for _, lsp in ipairs(servers) do
@@ -23,3 +25,20 @@ for _, lsp in ipairs(servers) do
     capabilities = capabilities,
   }
 end
+
+-- lspconfig.rust_analyzer.setup {
+--   on_attach = on_attach,
+--   capabilities = capabilities,
+--   filetypes = { "rust" },
+--   root_dir = util.root_pattern "Cargo.toml",
+--   settings = {
+--     ["rust-analyzer"] = {
+--       cargo = {
+--         allFeatures = true,
+--       },
+--       checkOnSave = {
+--         command = "clippy",
+--       },
+--     },
+--   },
+-- }

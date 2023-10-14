@@ -14,6 +14,8 @@ return {
       "pyright",
       "vue-language-server",
       "java-language-server",
+      "rust-analyzer",
+      "pest-language-server",
     },
   },
 }
