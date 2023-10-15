@@ -19,6 +19,13 @@ M.trouble = {
 
 M.crates = {
   n = {
+    ["<leader>cu"] = {
+      function()
+        require("crates").upgrade_crate()
+      end,
+      "Update crate",
+    },
+
     ["<leader>cU"] = {
       function()
         require("crates").upgrade_all_crates()
@@ -32,11 +39,14 @@ M.crates = {
       end,
       "Show crates popup",
     },
+  },
+}
 
-    ["<leader>cu"] = {
-      function()
-        require("crates").upgrade_crate()
-      end,
+M.lazygit = {
+  n = {
+    ["<leader>lg"] = {
+      "<cmd> LazyGit <CR>",
+      "Open LazyGit",
     },
   },
 }
